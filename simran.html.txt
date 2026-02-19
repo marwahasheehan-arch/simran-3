@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Simran 💜</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #E6E6FA; /* Lavender */
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+        text-align: center;
+        color: #5a3e6b;
+    }
+
+    .message {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+        background: rgba(255,255,255,0.7);
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        font-size: 20px;
+    }
+
+    .emoji {
+        position: absolute;
+        font-size: 28px;
+        animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+        0% { transform: translateY(-10vh); opacity: 1; }
+        100% { transform: translateY(110vh); opacity: 0; }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="message">
+🤍🌸🤍🌸🤍🌸🤍🌸🤍🌸🤍🌸🤍🌸🤍🌸🤍🌸🤍🌸<br><br>
+
+cheer up simran you got this sweetie💕💕<br><br>
+
+had cramps been a person I would've brutally murdered them <br><br>
+
+take care I'm sad I ain't there for you:((<br><br>
+
+take care cutiepieee 💕<br><br>
+
+here are some chocolate and flowers for you 🤍🍫🤍🍫🤍🍫🤍🍫🤍🍫<br><br>
+
+🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫<br>
+🤍🌸🤍🌸🤍🌸🤍🌸🤍🌸🤍🌸🤍🌸🤍🌸🤍🌸🤍🌸
+
+</div>
+
+<script>
+    const emojis = ["🤍","🌸","🍫","🤍","🌸","🍫","🤍","🌸","🍫"];
+
+    function createEmoji() {
+        const emoji = document.createElement("div");
+        emoji.classList.add("emoji");
+        emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+        emoji.style.left = Math.random() * 100 + "vw";
+        emoji.style.animationDuration = (3 + Math.random() * 4) + "s";
+        document.body.appendChild(emoji);
+
+        setTimeout(() => {
+            emoji.remove();
+        }, 7000);
+    }
+
+    setInterval(createEmoji, 250);
+</script>
+
+</body>
+</html>
